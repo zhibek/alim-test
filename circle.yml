@@ -6,7 +6,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn start
+      - run: yarn deploy
 
 workflows:
   version: 2

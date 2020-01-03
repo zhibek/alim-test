@@ -1,9 +1,15 @@
 {
-  "name": "alim-test",
+  "name": "serverless-example",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "John Levermore <john.levermore@zhibek.com>",
+  "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "deploy": "sls deploy"
   },
-  "license": "MIT"
+  "devDependencies": {
+    "serverless": "^1.60.4",
+    "serverless-dotenv-plugin": "^2.1.1",
+    "serverless-offline": "^5.12.1"
+  }
 }

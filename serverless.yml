@@ -1,0 +1,19 @@
+service: serverless-example
+
+provider:
+  name: aws
+  runtime: nodejs10.x
+  stage: dev
+  region: eu-west-1
+
+functions:
+  list:
+    handler: handler.LIST
+    events:
+      - http:
+          path: list
+          method: get
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline
