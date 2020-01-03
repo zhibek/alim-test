@@ -1,9 +1,15 @@
 version: 2.1
 jobs:
-  test:
+  build:
     docker:
       - image: circleci/node
     steps:
       - checkout
       - run: yarn install
       - run: yarn start
+
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
